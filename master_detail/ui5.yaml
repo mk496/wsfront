@@ -1,0 +1,7 @@
+specVersion: '2.2'
+metadata:
+  name: master_detail
+type: application
+framework:
+  name: OpenUI5
+  version: "1.85.2"

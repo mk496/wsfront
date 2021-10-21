@@ -1,0 +1,48 @@
+<mvc:View 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="sap.ui.demo.smartControls.table.controller.Master"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+		xmlns:core="sap.ui.core"
+	xmlns:my="sap.ui.demo.smartControls.table.controls">>
+	<Page 
+		id="page" 
+		title="Phones and Tablets" 
+		enableScrolling="false">
+		<content>
+		<!-- <my:MyCustomComboBox2 path='/Products' key='ProductId' text='Description'>	
+				
+			</my:MyCustomComboBox2> -->
+				<my:SelectMaterial  items="{
+					path: '/Products',
+					sorter: { path: 'ProductId' }
+				}"	>
+	
+				<core:Item key="{ProductId}" text="{ProductId} {Name}" />
+</my:SelectMaterial>
+				<!-- <my:CustomList
+		
+		items="{
+			path: '/Products'
+		}" >
+		<my:items>
+		<StandardListItem
+			title="{ProductId} - {Name}"
+			/>
+		</my:items>
+	</my:CustomList> -->
+			<!-- <smartTable:SmartTable 
+				id="smartTable"
+				tableType="ResponsiveTable" 
+				editable="false"
+				entitySet="Products" 
+				useVariantManagement="false"
+				useTablePersonalisation="true" 
+				header="Products" 
+				showRowCount="true"
+				useExportToExcel="false" 
+				enableAutoBinding="true">
+			</smartTable:SmartTable> -->
+		</content>
+	</Page>
+</mvc:View>
